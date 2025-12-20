@@ -109,10 +109,10 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-accent shrink-0" />
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+919033494363"
                   className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
                 >
-                  +91 98765 43210
+                  +91 90334 94363
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -139,8 +139,8 @@ export function Footer() {
       <div className="border-t border-primary-foreground/10">
         <div className="section-container py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-primary-foreground/60 text-sm">
-              © {currentYear} LAKERS. All rights reserved.
+            <p className="text-primary-foreground/60 text-sm text-center">
+              © {currentYear} LAKERS. All rights reserved. | Designed by Keyur L
             </p>
             <div className="flex items-center gap-6">
               <Link

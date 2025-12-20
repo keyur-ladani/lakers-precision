@@ -83,14 +83,14 @@ export function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+919876543210"
+              href="tel:+919033494363"
               className={cn(
                 "flex items-center gap-2 text-sm font-medium transition-colors duration-200",
                 isScrolled ? "text-foreground" : "text-primary-foreground"
               )}
             >
               <Phone size={16} />
-              <span className="hidden lg:inline">+91 98765 43210</span>
+              <span className="hidden lg:inline">+91 90334 94363</span>
             </a>
             <Button variant={isScrolled ? "default" : "hero"} size="sm" asChild>
               <Link to="/contact">Get Quote</Link>
