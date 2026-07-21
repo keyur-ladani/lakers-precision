@@ -5,6 +5,9 @@ import { Layout } from "@/components/Layout";
 import { Search, Filter, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import floorSprings1 from "@/assets/fllor-springis-lakers.png"
+
+
 import productFloorSpring from "@/assets/product-floor-spring.jpg";
 import productPatch from "@/assets/product-patch.jpg";
 import productLock from "@/assets/product-lock.jpg";
@@ -17,28 +20,34 @@ import productShower from "@/assets/product-shower.jpg";
 const categories = [
   { id: "all", name: "All Products" },
   { id: "floor-springs", name: "Floor Springs" },
+  { id: "door-closers", name: "Door Closers" },
   { id: "patch-fittings", name: "Patch Fittings" },
   { id: "glass-locks", name: "Glass Locks" },
-  { id: "spider-fittings", name: "Spider Fittings" },
-  { id: "door-closers", name: "Door Closers" },
-  { id: "mortise-handles", name: "Mortise Handles" },
-  { id: "glass-door-handles", name: "Glass Door Handles" },
   { id: "shower-hinges", name: "Shower Hinges" },
+  { id: "sliding-door-roller", name: "Sliding Door Roller" },
+  { id: "spider-fittings", name: "Spider Fittings" },
+  { id: "glass-door-handles", name: "Glass Door Handles" },
 ];
 
-const materials = ["All", "SS 202", "SS 304"];
-const finishes = ["All", "Satin", "Glossy", "Combi"];
+// const materials = ["All", "SS 202", "SS 304"];
+// const finishes = ["All", "Satin", "Glossy", "Combi"];
 
 const products = [
   {
     id: 1,
-    name: "Floor Spring LFS-02",
+    name: "Floor Spring",
     code: "LFS-02",
     category: "floor-springs",
     material: "SS 304",
     finish: "Satin",
     image: productFloorSpring,
     description: "Heavy-duty hydraulic floor spring for glass doors up to 120kg",
+  },
+  {
+    id:2,
+    name: "Floor Spring",
+    image: floorSprings1,
+    category: "floor-springs"
   },
   {
     id: 2,
@@ -154,9 +163,9 @@ const products = [
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedMaterial, setSelectedMaterial] = useState("All");
-  const [selectedFinish, setSelectedFinish] = useState("All");
+  // const [searchQuery, setSearchQuery] = useState("");
+  // const [selectedMaterial, setSelectedMaterial] = useState("All");
+  // const [selectedFinish, setSelectedFinish] = useState("All");
   const [showFilters, setShowFilters] = useState(false);
 
   const selectedCategory = searchParams.get("category") || "all";
@@ -174,31 +183,31 @@ const Products = () => {
     return products.filter((product) => {
       const matchesCategory =
         selectedCategory === "all" || product.category === selectedCategory;
-      const matchesMaterial =
-        selectedMaterial === "All" || product.material === selectedMaterial;
-      const matchesFinish =
-        selectedFinish === "All" || product.finish === selectedFinish;
-      const matchesSearch =
-        searchQuery === "" ||
-        product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        product.code.toLowerCase().includes(searchQuery.toLowerCase());
+      // const matchesMaterial =
+      //   selectedMaterial === "All" || product.material === selectedMaterial;
+      // const matchesFinish =
+      //   selectedFinish === "All" || product.finish === selectedFinish;
+      // const matchesSearch =
+        // searchQuery === "" ||
+        // product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        // product.code.toLowerCase().includes(searchQuery.toLowerCase());
 
-      return matchesCategory && matchesMaterial && matchesFinish && matchesSearch;
+      return matchesCategory ;
     });
-  }, [selectedCategory, selectedMaterial, selectedFinish, searchQuery]);
+  }, [selectedCategory]);
 
   const clearFilters = () => {
     setCategory("all");
-    setSelectedMaterial("All");
-    setSelectedFinish("All");
-    setSearchQuery("");
+    // setSelectedMaterial("All");
+    // setSelectedFinish("All");
+    // setSearchQuery("");
   };
 
   const hasActiveFilters =
-    selectedCategory !== "all" ||
-    selectedMaterial !== "All" ||
-    selectedFinish !== "All" ||
-    searchQuery !== "";
+    selectedCategory !== "all"
+    // selectedMaterial !== "All" ||
+    // selectedFinish !== "All" ||
+    // searchQuery !== "";
 
   return (
     <Layout>
@@ -239,7 +248,7 @@ const Products = () => {
             >
               <div className="sticky top-28 space-y-8">
                 {/* Search */}
-                <div>
+                {/* <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Search
                   </label>
@@ -256,7 +265,7 @@ const Products = () => {
                       className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                     />
                   </div>
-                </div>
+                </div> */}
 
                 {/* Categories */}
                 <div>
@@ -281,7 +290,7 @@ const Products = () => {
                 </div>
 
                 {/* Material */}
-                <div>
+                {/* <div>
                   <label className="text-sm font-medium text-foreground mb-3 block">
                     Material
                   </label>
@@ -300,10 +309,10 @@ const Products = () => {
                       </button>
                     ))}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Finish */}
-                <div>
+                {/* <div>
                   <label className="text-sm font-medium text-foreground mb-3 block">
                     Finish
                   </label>
@@ -322,7 +331,7 @@ const Products = () => {
                       </button>
                     ))}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Clear Filters */}
                 {hasActiveFilters && (
@@ -354,7 +363,7 @@ const Products = () => {
                   </span>
                 )}
               </Button>
-              <div className="relative flex-1">
+              {/* <div className="relative flex-1">
                 <Search
                   size={18}
                   className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
@@ -366,7 +375,7 @@ const Products = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
                 />
-              </div>
+              </div> */}
             </div>
 
             {/* Mobile Filters Panel */}
@@ -400,7 +409,7 @@ const Products = () => {
                 </div>
 
                 {/* Material & Finish */}
-                <div className="grid grid-cols-2 gap-4">
+                {/* <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">
                       Material
@@ -433,7 +442,7 @@ const Products = () => {
                       ))}
                     </select>
                   </div>
-                </div>
+                </div> */}
 
                 {hasActiveFilters && (
                   <Button
@@ -476,11 +485,11 @@ const Products = () => {
                       className="product-card group"
                     >
                       {/* Image */}
-                      <div className="aspect-square overflow-hidden bg-muted">
+                      <div className="aspect-square overflow-hidden bg-white">
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                         />
                       </div>
                       {/* Content */}
@@ -489,21 +498,21 @@ const Products = () => {
                           <h3 className="font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
                             {product.name}
                           </h3>
-                          <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-1 rounded shrink-0">
+                          {/* <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-1 rounded shrink-0">
                             {product.code}
-                          </span>
+                          </span> */}
                         </div>
-                        <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                        {/* <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                           {product.description}
-                        </p>
-                        <div className="flex items-center gap-2 flex-wrap">
+                        </p> */}
+                        {/* <div className="flex items-center gap-2 flex-wrap">
                           <span className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
                             {product.material}
                           </span>
                           <span className="text-xs px-2 py-1 rounded-full bg-accent/10 text-accent-dark font-medium">
                             {product.finish}
                           </span>
-                        </div>
+                        </div> */}
                       </div>
                     </motion.div>
                   ))}

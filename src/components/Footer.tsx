@@ -8,14 +8,14 @@ const quickLinks = [
   { name: "Contact Us", href: "/contact" },
 ];
 
-const productLinks = [
-  { name: "Glass Door Handles", href: "/products?category=glass-door-handles" },
-  { name: "Patch Fittings", href: "/products?category=patch-fittings" },
-  { name: "Floor Springs", href: "/products?category=floor-springs" },
-  { name: "Mortise Handles", href: "/products?category=mortise-handles" },
-  { name: "Door Closers", href: "/products?category=door-closers" },
-  { name: "Shower Hinges", href: "/products?category=shower-hinges" },
-];
+// const productLinks = [
+//   { name: "Glass Door Handles", href: "/products?category=glass-door-handles" },
+//   { name: "Patch Fittings", href: "/products?category=patch-fittings" },
+//   { name: "Floor Springs", href: "/products?category=floor-springs" },
+//   { name: "Mortise Handles", href: "/products?category=mortise-handles" },
+//   { name: "Door Closers", href: "/products?category=door-closers" },
+//   { name: "Shower Hinges", href: "/products?category=shower-hinges" },
+// ];
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,7 +24,7 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground">
       {/* Main Footer */}
       <div className="section-container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
@@ -72,7 +72,7 @@ export function Footer() {
           </div>
 
           {/* Products */}
-          <div>
+          {/* <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider mb-6 text-accent">
               Our Products
             </h4>
@@ -92,7 +92,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div>
