@@ -7,6 +7,17 @@ import { Button } from "@/components/ui/button";
 // import { useWatermarkedImage } from "@/lib/useWatermarkedImage";
 import floorSprings1 from "@/assets/fllor-springis-lakers.png"
 
+import floor1 from "@/assets/Fllor-springs/floor-1.jpg"
+import floor2 from "@/assets/Fllor-springs/floor-2.jpg"
+import floor3 from "@/assets/Fllor-springs/floor-3.jpg"
+import floor4 from "@/assets/Fllor-springs/floor-4.jpg"
+import floor5 from "@/assets/Fllor-springs/floor-5.jpg"
+import floor6 from "@/assets/Fllor-springs/floor-6.jpg"
+import floor7 from "@/assets/Fllor-springs/floor-7.jpg"
+import floor8 from "@/assets/Fllor-springs/floor-8.jpg"
+import floor9 from "@/assets/Fllor-springs/floor-9.jpg"
+import floor10 from "@/assets/Fllor-springs/floor-10.jpg"
+import floor11 from "@/assets/Fllor-springs/floor-11.jpg"
 
 import productFloorSpring from "@/assets/product-floor-spring.jpg";
 import productPatch from "@/assets/product-patch.jpg";
@@ -37,17 +48,11 @@ const products = [
     id: 1,
     name: "Floor Spring",
     code: "LFS-02",
-    category: "floor-springs",
+    category: "Spider Fittings",
     material: "SS 304",
     finish: "Satin",
     image: productFloorSpring,
     description: "Heavy-duty hydraulic floor spring for glass doors up to 120kg",
-  },
-  {
-    id: 2,
-    name: "Floor Spring",
-    image: floorSprings1,
-    category: "floor-springs"
   },
   {
     id: 2,
@@ -123,7 +128,7 @@ const products = [
     id: 9,
     name: "Floor Spring LFS-03",
     code: "LFS-03",
-    category: "floor-springs",
+    category: "Spider Fittings",
     material: "SS 304",
     finish: "Glossy",
     image: productFloorSpring,
@@ -158,6 +163,64 @@ const products = [
     finish: "Glossy",
     image: productMortise,
     description: "Modern slim profile lever handle design",
+  },
+  {
+    id: 13,
+    name: "Floor Spring",
+    image: floor1,
+    category: "floor-springs"
+  },
+  {
+    id: 14,
+    name: "Floor Spring",
+    image: floor2,
+    category: "floor-springs"
+  },
+   {
+    id: 15,
+    name: "Floor Spring",
+    image: floor3,
+    category: "floor-springs"
+  }, {
+    id: 16,
+    name: "Floor Spring",
+    image: floor4,
+    category: "floor-springs"
+  }, {
+    id: 17,
+    name: "Floor Spring",
+    image: floor5,
+    category: "floor-springs"
+  }, {
+    id: 18,
+    name: "Floor Spring",
+    image: floor6,
+    category: "floor-springs"
+  }, {
+    id: 19,
+    name: "Floor Spring",
+    image: floor7,
+    category: "floor-springs"
+  }, {
+    id: 20,
+    name: "Floor Spring",
+    image: floor8,
+    category: "floor-springs"
+  }, {
+    id: 21,
+    name: "Floor Spring",
+    image: floor9,
+    category: "floor-springs"
+  }, {
+    id: 22,
+    name: "Floor Spring",
+    image: floor10,
+    category: "floor-springs"
+  }, {
+    id: 23,
+    name: "Floor Spring",
+    image: floor11,
+    category: "floor-springs"
   },
 ];
 export type WatermarkPosition =
