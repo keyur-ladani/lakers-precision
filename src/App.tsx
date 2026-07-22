@@ -29,8 +29,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <HashRouter >
-      {/* <BrowserRouter> */}
+      {/* <HashRouter > */}
+      <BrowserRouter>
       <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
@@ -40,7 +40,8 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </HashRouter>
+        </BrowserRouter>
+      {/* </HashRouter> */}
     </TooltipProvider>
   </QueryClientProvider>
 );

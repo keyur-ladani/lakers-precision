@@ -118,7 +118,7 @@ export function WhyChooseUs() {
               Request a Quote
             </a>
             <a
-              href="tel:+918040376087"
+              href="tel:+918140376087"
               className="inline-flex items-center gap-2 border-2 border-primary-foreground/50 text-primary-foreground font-medium px-8 py-4 rounded-lg hover:bg-primary-foreground/10 transition-all duration-300"
             >
               Call Us Now

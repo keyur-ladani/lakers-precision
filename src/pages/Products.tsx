@@ -702,7 +702,7 @@ const Products = () => {
                   </Button>
                 </div>
               ) : (
-                <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                <div className="grid sm:grid-cols-2 xl:grid-cols-2 gap-6">
                   {filteredProducts.map((product, index) => (
                     <motion.div
                       key={product.id}
@@ -721,15 +721,15 @@ const Products = () => {
                         <ProductImage src={product.image} alt={product.name} />
                       </div>
                       {/* Content */}
-                      <div className="p-5">
+                      {/* <div className="p-5">
                         <div className="flex items-start justify-between gap-2 mb-2">
                           <h3 className="font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
                             {product.name}
-                          </h3>
+                          </h3> */}
                           {/* <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-1 rounded shrink-0">
                             {product.code}
                           </span> */}
-                        </div>
+                        {/* </div> */}
                         {/* <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                           {product.description}
                         </p> */}
@@ -741,7 +741,7 @@ const Products = () => {
                             {product.finish}
                           </span>
                         </div> */}
-                      </div>
+                      {/* // </div> */}
                     </motion.div>
                   ))}
                 </div>
