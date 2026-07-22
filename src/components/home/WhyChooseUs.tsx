@@ -7,6 +7,7 @@ import {
   Package,
   Users,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -111,12 +112,12 @@ export function WhyChooseUs() {
             competitive pricing on all your hardware needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-semibold px-8 py-4 rounded-lg shadow-gold hover:bg-accent-light transition-all duration-300"
             >
               Request a Quote
-            </a>
+            </Link>
             <a
               href="tel:+918140376087"
               className="inline-flex items-center gap-2 border-2 border-primary-foreground/50 text-primary-foreground font-medium px-8 py-4 rounded-lg hover:bg-primary-foreground/10 transition-all duration-300"
