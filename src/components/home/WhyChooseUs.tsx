@@ -60,10 +60,10 @@ export function WhyChooseUs() {
           className="text-center max-w-2xl mx-auto mb-16"
         >
           <span className="text-accent font-medium text-sm tracking-wider uppercase">
-            Why LAKERS
+            Why Allen
           </span>
           <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mt-3 mb-4">
-            Why Choose LAKERS?
+            Why Choose Allen?
           </h2>
           <p className="text-muted-foreground text-lg">
             Experience the difference of working with a trusted partner committed
@@ -118,7 +118,7 @@ export function WhyChooseUs() {
               Request a Quote
             </a>
             <a
-              href="tel:+919033494363"
+              href="tel:+918040376087"
               className="inline-flex items-center gap-2 border-2 border-primary-foreground/50 text-primary-foreground font-medium px-8 py-4 rounded-lg hover:bg-primary-foreground/10 transition-all duration-300"
             >
               Call Us Now

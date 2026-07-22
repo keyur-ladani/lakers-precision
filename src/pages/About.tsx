@@ -72,7 +72,7 @@ const About = () => {
               <span className="text-accent">Precision</span>
             </h1>
             <p className="text-primary-foreground/80 text-xl leading-relaxed">
-              Since 2015, LAKERS has been at the forefront of architectural
+              Since 2015, Allen has been at the forefront of architectural
               hardware innovation, delivering premium solutions to architects,
               builders, and contractors across India.
             </p>

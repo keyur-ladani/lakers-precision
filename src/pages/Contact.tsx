@@ -61,7 +61,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 90334 94363", "+91 81403 76087"],
+      details: ["+91 81403 76087","+91 90334 94363"],
     },
     {
       icon: Mail,
@@ -293,7 +293,7 @@ const Contact = () => {
                   Chat with us instantly for quick inquiries
                 </p>
                 <a
-                  href="https://wa.me/919033494363"
+                  href="https://wa.me/918140376087"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#25D366] text-white font-medium px-6 py-3 rounded-lg hover:bg-[#22c55e] transition-colors"

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
+import logo from '../assets/AllenLogo.png'
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -42,7 +42,8 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
             <div className="flex flex-col">
-              <span
+              <img src={logo} alt="" className="h-[60px] " />
+              {/* <span
                 className={cn(
                   "text-2xl font-heading font-bold tracking-wide transition-colors duration-300",
                   isScrolled ? "text-primary" : "text-primary-foreground"
@@ -57,7 +58,7 @@ export function Navbar() {
                 )}
               >
                 Architectural Hardware
-              </span>
+              </span> */}
             </div>
           </Link>
 
@@ -83,14 +84,14 @@ export function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+919033494363"
+              href="tel:+918140376087"
               className={cn(
                 "flex items-center gap-2 text-sm font-medium transition-colors duration-200",
                 isScrolled ? "text-foreground" : "text-primary-foreground"
               )}
             >
               <Phone size={16} />
-              <span className="hidden lg:inline">+91 90334 94363</span>
+              <span className="hidden lg:inline">+91 81403 76087</span>
             </a>
             <Button variant={isScrolled ? "default" : "hero"} size="sm" asChild>
               <Link to="/contact">Get Quote</Link>

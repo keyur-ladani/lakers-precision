@@ -1,10 +1,10 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/Layout";
 import { Search, Filter, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+// import { useWatermarkedImage } from "@/lib/useWatermarkedImage";
 import floorSprings1 from "@/assets/fllor-springis-lakers.png"
 
 
@@ -16,7 +16,7 @@ import productDoorCloser from "@/assets/product-door-closer.jpg";
 import productMortise from "@/assets/product-mortise.jpg";
 import productHandle from "@/assets/product-handle.jpg";
 import productShower from "@/assets/product-shower.jpg";
-
+import watermarkLogo from "@/assets/AllenLogo.png";
 const categories = [
   { id: "all", name: "All Products" },
   { id: "floor-springs", name: "Floor Springs" },
@@ -44,7 +44,7 @@ const products = [
     description: "Heavy-duty hydraulic floor spring for glass doors up to 120kg",
   },
   {
-    id:2,
+    id: 2,
     name: "Floor Spring",
     image: floorSprings1,
     category: "floor-springs"
@@ -160,7 +160,156 @@ const products = [
     description: "Modern slim profile lever handle design",
   },
 ];
+export type WatermarkPosition =
+  | "top-left"
+  | "top-right"
+  | "bottom-left"
+  | "bottom-right"
+  | "center"
+  | "tile";
 
+export interface WatermarkOptions {
+  image: string;
+  watermark: string;
+  opacity?: number;
+  watermarkSize?: number;
+  spacing?: number;
+  position?: WatermarkPosition;
+  tileGap?: number;
+  rotation?: number;
+  outputType?: "image/png" | "image/jpeg" | "image/webp";
+  outputQuality?: number;
+}
+
+function loadImage(src: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => resolve(img);
+    img.onerror = (err) => reject(new Error(`Failed to load image: ${src} (${err})`));
+    img.src = src;
+  });
+}
+
+export async function addWatermark(options: WatermarkOptions): Promise<string> {
+  const {
+    image,
+    watermark,
+    opacity = 0.4,
+    watermarkSize = 0.25,
+    spacing = 16,
+    position = "bottom-right",
+    tileGap = 40,
+    rotation = 0,
+    outputType = "image/png",
+    outputQuality = 0.92,
+  } = options;
+
+  const [baseImg, markImg] = await Promise.all([loadImage(image), loadImage(watermark)]);
+
+  const canvas = document.createElement("canvas");
+  canvas.width = baseImg.naturalWidth;
+  canvas.height = baseImg.naturalHeight;
+
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Could not get 2D canvas context");
+
+  ctx.drawImage(baseImg, 0, 0, canvas.width, canvas.height);
+
+  const wmWidth = canvas.width * watermarkSize;
+  const wmHeight = wmWidth * (markImg.naturalHeight / markImg.naturalWidth);
+
+  const drawMark = (x: number, y: number, w: number, h: number) => {
+    ctx.save();
+    ctx.globalAlpha = opacity;
+    if (rotation !== 0) {
+      const cx = x + w / 2;
+      const cy = y + h / 2;
+      ctx.translate(cx, cy);
+      ctx.rotate((rotation * Math.PI) / 180);
+      ctx.drawImage(markImg, -w / 2, -h / 2, w, h);
+    } else {
+      ctx.drawImage(markImg, x, y, w, h);
+    }
+    ctx.restore();
+  };
+
+  if (position === "tile") {
+    const stepX = wmWidth + tileGap;
+    const stepY = wmHeight + tileGap;
+    for (let y = spacing; y < canvas.height; y += stepY) {
+      for (let x = spacing; x < canvas.width; x += stepX) {
+        drawMark(x, y, wmWidth, wmHeight);
+      }
+    }
+  } else {
+    let x = 0;
+    let y = 0;
+
+    switch (position) {
+      case "top-left":
+        x = spacing;
+        y = spacing;
+        break;
+      case "top-right":
+        x = canvas.width - wmWidth - spacing;
+        y = spacing;
+        break;
+      case "bottom-left":
+        x = spacing;
+        y = canvas.height - wmHeight - spacing;
+        break;
+      case "center":
+        x = (canvas.width - wmWidth) / 2;
+        y = (canvas.height - wmHeight) / 2;
+        break;
+      case "bottom-right":
+      default:
+        x = canvas.width - wmWidth - spacing;
+        y = canvas.height - wmHeight - spacing;
+        break;
+    }
+
+    drawMark(x, y, wmWidth, wmHeight);
+  }
+
+  return canvas.toDataURL(outputType, outputQuality);
+}
+
+export async function addWatermarkAsBlob(options: WatermarkOptions): Promise<Blob> {
+  const dataUrl = await addWatermark(options);
+  const res = await fetch(dataUrl);
+  return res.blob();
+}
+
+
+export function useWatermarkedImage(
+  src: string,
+  watermarkSrc: string,
+  options?: any
+) {
+  const [result, setResult] = useState<string>(src);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    addWatermark({ image: src, watermark: watermarkSrc, ...options })
+      .then((dataUrl) => {
+        if (!cancelled) setResult(dataUrl);
+      })
+      .catch((err) => {
+        console.error("Watermarking failed, falling back to original image:", err);
+        if (!cancelled) setResult(src);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [src, watermarkSrc, JSON.stringify(options)]);
+
+  return result;
+}
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   // const [searchQuery, setSearchQuery] = useState("");
@@ -188,11 +337,11 @@ const Products = () => {
       // const matchesFinish =
       //   selectedFinish === "All" || product.finish === selectedFinish;
       // const matchesSearch =
-        // searchQuery === "" ||
-        // product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        // product.code.toLowerCase().includes(searchQuery.toLowerCase());
+      // searchQuery === "" ||
+      // product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      // product.code.toLowerCase().includes(searchQuery.toLowerCase());
 
-      return matchesCategory ;
+      return matchesCategory;
     });
   }, [selectedCategory]);
 
@@ -205,10 +354,27 @@ const Products = () => {
 
   const hasActiveFilters =
     selectedCategory !== "all"
-    // selectedMaterial !== "All" ||
-    // selectedFinish !== "All" ||
-    // searchQuery !== "";
+  // selectedMaterial !== "All" ||
+  // selectedFinish !== "All" ||
+  // searchQuery !== "";
+  const ProductImage = ({ src, alt }: { src: string; alt: string }) => {
+    const watermarkedSrc = useWatermarkedImage(src, watermarkLogo, {
+      opacity: 0.30,
+      watermarkSize: 0.12,
+      position: "tile",
+      tileGapX: 40,
+      tileGapY: 60,
+      rotation: 45,
+    });
 
+    return (
+      <img
+        src={watermarkedSrc}
+        alt={alt}
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+    );
+  };
   return (
     <Layout>
       {/* Hero Section */}
@@ -277,11 +443,10 @@ const Products = () => {
                       <button
                         key={cat.id}
                         onClick={() => setCategory(cat.id)}
-                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
-                          selectedCategory === cat.id
+                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${selectedCategory === cat.id
                             ? "bg-primary text-primary-foreground"
                             : "text-foreground hover:bg-muted"
-                        }`}
+                          }`}
                       >
                         {cat.name}
                       </button>
@@ -396,11 +561,10 @@ const Products = () => {
                       <button
                         key={cat.id}
                         onClick={() => setCategory(cat.id)}
-                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
-                          selectedCategory === cat.id
+                        className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${selectedCategory === cat.id
                             ? "bg-primary text-primary-foreground"
                             : "bg-background text-foreground"
-                        }`}
+                          }`}
                       >
                         {cat.name}
                       </button>
@@ -486,11 +650,12 @@ const Products = () => {
                     >
                       {/* Image */}
                       <div className="aspect-square overflow-hidden bg-white">
-                        <img
+                        {/* <img
                           src={product.image}
                           alt={product.name}
                           className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
-                        />
+                        /> */}
+                        <ProductImage src={product.image} alt={product.name} />
                       </div>
                       {/* Content */}
                       <div className="p-5">

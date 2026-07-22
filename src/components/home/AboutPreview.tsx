@@ -63,7 +63,7 @@ export function AboutPreview() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <span className="text-accent font-medium text-sm tracking-wider uppercase">
-              About LAKERS
+              About Allen
             </span>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mt-3 mb-6">
               Engineering Excellence in{" "}
