@@ -19,6 +19,86 @@ import floor9 from "@/assets/Fllor-springs/floor-9.jpg"
 import floor10 from "@/assets/Fllor-springs/floor-10.jpg"
 import floor11 from "@/assets/Fllor-springs/floor-11.jpg"
 
+import door1 from "@/assets/DOOR CLOSER/door-1.jpg"
+import door2 from "@/assets/DOOR CLOSER/door-2.jpg"
+import door3 from "@/assets/DOOR CLOSER/door-3.jpg"
+import door4 from "@/assets/DOOR CLOSER/door-4.jpg"
+import door5 from "@/assets/DOOR CLOSER/door-5.jpg"
+import door6 from "@/assets/DOOR CLOSER/door-6.jpg"
+import door7 from "@/assets/DOOR CLOSER/door-7.jpg"
+import door8 from "@/assets/DOOR CLOSER/door-8.jpg"
+
+import patch1 from "@/assets/PATCH FITTINGS/patch-1.jpg"
+import patch2 from "@/assets/PATCH FITTINGS/patch-2.jpg"
+import patch3 from "@/assets/PATCH FITTINGS/patch-3.jpg"
+import patch4 from "@/assets/PATCH FITTINGS/patch-4.jpg"
+import patch5 from "@/assets/PATCH FITTINGS/patch-5.jpg"
+import patch6 from "@/assets/PATCH FITTINGS/patch-6.jpg"
+import patch7 from "@/assets/PATCH FITTINGS/patch-7.jpg"
+import patch8 from "@/assets/PATCH FITTINGS/patch-8.jpg"
+import patch9 from "@/assets/PATCH FITTINGS/patch-9.jpg"
+
+
+import lock1 from "@/assets/GLASS DOOR LOCK/lock-1.jpg"
+import lock2 from "@/assets/GLASS DOOR LOCK/lock-2.jpg"
+import lock3 from "@/assets/GLASS DOOR LOCK/lock-3.jpg"
+import lock4 from "@/assets/GLASS DOOR LOCK/lock-4.jpg"
+import lock5 from "@/assets/GLASS DOOR LOCK/lock-5.jpg"
+import lock6 from "@/assets/GLASS DOOR LOCK/lock-6.jpg"
+import lock7 from "@/assets/GLASS DOOR LOCK/lock-7.jpg"
+import lock8 from "@/assets/GLASS DOOR LOCK/lock-8.jpg"
+import lock9 from "@/assets/GLASS DOOR LOCK/lock-9.jpg"
+import lock10 from "@/assets/GLASS DOOR LOCK/lock-10.jpg"
+import lock11 from "@/assets/GLASS DOOR LOCK/lock-11.jpg"
+import lock12 from "@/assets/GLASS DOOR LOCK/lock-12.jpg"
+
+
+import shower1 from "@/assets/SHOWER HINGES/shower-1.jpg"
+import shower2 from "@/assets/SHOWER HINGES/shower-2.jpg"
+import shower3 from "@/assets/SHOWER HINGES/shower-3.jpg"
+import shower4 from "@/assets/SHOWER HINGES/shower-4.jpg"
+import shower5 from "@/assets/SHOWER HINGES/shower-5.jpg"
+import shower6 from "@/assets/SHOWER HINGES/shower-6.jpg"
+import shower7 from "@/assets/SHOWER HINGES/shower-7.jpg"
+import shower8 from "@/assets/SHOWER HINGES/shower-8.jpg"
+import shower9 from "@/assets/SHOWER HINGES/shower-9.jpg"
+import shower10 from "@/assets/SHOWER HINGES/shower-10.jpg"
+import shower11 from "@/assets/SHOWER HINGES/shower-11.jpg"
+
+
+import doorRoller1 from "@/assets/SLIDING DOOR ROLLER/door-roller-1.jpg"
+import doorRoller2 from "@/assets/SLIDING DOOR ROLLER/door-roller-2.jpg"
+import doorRoller3 from "@/assets/SLIDING DOOR ROLLER/door-roller-3.jpg"
+import doorRoller4 from "@/assets/SLIDING DOOR ROLLER/door-roller-4.jpg"
+import doorRoller5 from "@/assets/SLIDING DOOR ROLLER/door-roller-5.jpg"
+import doorRoller6 from "@/assets/SLIDING DOOR ROLLER/door-roller-6.jpg"
+import doorRoller7 from "@/assets/SLIDING DOOR ROLLER/door-roller-7.jpg"
+import doorRoller8 from "@/assets/SLIDING DOOR ROLLER/door-roller-8.jpg"
+import doorRoller9 from "@/assets/SLIDING DOOR ROLLER/door-roller-9.jpeg"
+import doorRoller10 from "@/assets/SLIDING DOOR ROLLER/door-roller-10.jpg"
+
+
+import spider1 from "@/assets/SPIDER FITTINGS/spider-1.webp"
+import spider2 from "@/assets/SPIDER FITTINGS/spider-2.jpg"
+import spider3 from "@/assets/SPIDER FITTINGS/spider-3.jpg"
+import spider4 from "@/assets/SPIDER FITTINGS/spider-4.jpg"
+import spider5 from "@/assets/SPIDER FITTINGS/spider-5.jpg"
+
+import handel1 from "@/assets/GLASS DOOR HANDLE/handel1.jpg"
+import handel2 from "@/assets/GLASS DOOR HANDLE/handel2.jpg"
+import handel3 from "@/assets/GLASS DOOR HANDLE/handel3.jpg"
+import handel4 from "@/assets/GLASS DOOR HANDLE/handel4.jpg"
+import handel5 from "@/assets/GLASS DOOR HANDLE/handel5.jpg"
+import handel6 from "@/assets/GLASS DOOR HANDLE/handel6.jpg"
+import handel7 from "@/assets/GLASS DOOR HANDLE/handel7.jpg"
+import handel8 from "@/assets/GLASS DOOR HANDLE/handel8.jpg"
+import handel9 from "@/assets/GLASS DOOR HANDLE/handel9.jpg"
+import handel10 from "@/assets/GLASS DOOR HANDLE/handel10.jpg"
+import handel11 from "@/assets/GLASS DOOR HANDLE/handel11.jpg"
+import handel12 from "@/assets/GLASS DOOR HANDLE/handel12.jpg"
+import handel13 from "@/assets/GLASS DOOR HANDLE/handel13.jpg"
+import handel14 from "@/assets/GLASS DOOR HANDLE/handel14.jpg"
+
 import productFloorSpring from "@/assets/product-floor-spring.jpg";
 import productPatch from "@/assets/product-patch.jpg";
 import productLock from "@/assets/product-lock.jpg";
@@ -44,184 +124,605 @@ const categories = [
 // const finishes = ["All", "Satin", "Glossy", "Combi"];
 
 const products = [
+  // {
+  //   id: 1,
+  //   name: "Floor Spring",
+  //   code: "LFS-02",
+  //   category: "Spider Fittings",
+  //   material: "SS 304",
+  //   finish: "Satin",
+  //   image: productFloorSpring,
+  //   description: "Heavy-duty hydraulic floor spring for glass doors up to 120kg",
+  // },
+  // {
+  //   id: 2,
+  //   name: "Patch Fitting LPF-01",
+  //   code: "LPF-01",
+  //   category: "patch-fittings",
+  //   material: "SS 304",
+  //   finish: "Glossy",
+  //   image: productPatch,
+  //   description: "Glass to glass 180° patch fitting with beveled edges",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Glass Lock LGL-05",
+  //   code: "LGL-05",
+  //   category: "glass-locks",
+  //   material: "SS 202",
+  //   finish: "Satin",
+  //   image: productLock,
+  //   description: "Center lock for 10-12mm tempered glass doors",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Spider Fitting LSF-04",
+  //   code: "LSF-04",
+  //   category: "spider-fittings",
+  //   material: "SS 304",
+  //   finish: "Glossy",
+  //   image: productSpider,
+  //   description: "4-arm spider connector for structural glazing",
+  // },
+  // {
+  //   id: 6,
+  //   name: "Mortise Handle LMH-31",
+  //   code: "LMH-31",
+  //   category: "mortise-handles",
+  //   material: "SS 304",
+  //   finish: "Combi",
+  //   image: productMortise,
+  //   description: "Premium lever handle with rose escutcheon",
+  // },
+  // {
+  //   id: 7,
+  //   name: "Glass Handle H-Type LGH-01",
+  //   code: "LGH-01",
+  //   category: "glass-door-handles",
+  //   material: "SS 304",
+  //   finish: "Satin",
+  //   image: productHandle,
+  //   description: "H-Type pull handle for frameless glass doors",
+  // },
+  // {
+  //   id: 8,
+  //   name: "Shower Hinge LSH-90",
+  //   code: "LSH-90",
+  //   category: "shower-hinges",
+  //   material: "SS 304",
+  //   finish: "Glossy",
+  //   image: productShower,
+  //   description: "90° glass to wall shower hinge with soft close",
+  // },
+  // {
+  //   id: 9,
+  //   name: "Floor Spring LFS-03",
+  //   code: "LFS-03",
+  //   category: "Spider Fittings",
+  //   material: "SS 304",
+  //   finish: "Glossy",
+  //   image: productFloorSpring,
+  //   description: "Premium floor spring with 90° hold open function",
+  // },
+  // {
+  //   id: 10,
+  //   name: "Glass Handle D-Type LGH-02",
+  //   code: "LGH-02",
+  //   category: "glass-door-handles",
+  //   material: "SS 202",
+  //   finish: "Satin",
+  //   image: productHandle,
+  //   description: "D-Type curved handle for elegant glass entrances",
+  // },
+  // {
+  //   id: 11,
+  //   name: "Patch Fitting LPF-02",
+  //   code: "LPF-02",
+  //   category: "patch-fittings",
+  //   material: "SS 304",
+  //   finish: "Satin",
+  //   image: productPatch,
+  //   description: "Glass to wall 90° patch fitting for partitions",
+  // },
+  // {
+  //   id: 12,
+  //   name: "Mortise Handle LMH-45",
+  //   code: "LMH-45",
+  //   category: "mortise-handles",
+  //   material: "SS 304",
+  //   finish: "Glossy",
+  //   image: productMortise,
+  //   description: "Modern slim profile lever handle design",
+  // },
+ 
   {
     id: 1,
-    name: "Floor Spring",
-    code: "LFS-02",
-    category: "Spider Fittings",
-    material: "SS 304",
-    finish: "Satin",
-    image: productFloorSpring,
-    description: "Heavy-duty hydraulic floor spring for glass doors up to 120kg",
-  },
-  {
-    id: 2,
-    name: "Patch Fitting LPF-01",
-    code: "LPF-01",
-    category: "patch-fittings",
-    material: "SS 304",
-    finish: "Glossy",
-    image: productPatch,
-    description: "Glass to glass 180° patch fitting with beveled edges",
-  },
-  {
-    id: 3,
-    name: "Glass Lock LGL-05",
-    code: "LGL-05",
-    category: "glass-locks",
-    material: "SS 202",
-    finish: "Satin",
-    image: productLock,
-    description: "Center lock for 10-12mm tempered glass doors",
-  },
-  {
-    id: 4,
-    name: "Spider Fitting LSF-04",
-    code: "LSF-04",
-    category: "spider-fittings",
-    material: "SS 304",
-    finish: "Glossy",
-    image: productSpider,
-    description: "4-arm spider connector for structural glazing",
-  },
-  {
-    id: 5,
-    name: "Door Closer LDC-03",
-    code: "LDC-03",
-    category: "door-closers",
-    material: "SS 202",
-    finish: "Satin",
-    image: productDoorCloser,
-    description: "Overhead door closer with adjustable closing speed",
-  },
-  {
-    id: 6,
-    name: "Mortise Handle LMH-31",
-    code: "LMH-31",
-    category: "mortise-handles",
-    material: "SS 304",
-    finish: "Combi",
-    image: productMortise,
-    description: "Premium lever handle with rose escutcheon",
-  },
-  {
-    id: 7,
-    name: "Glass Handle H-Type LGH-01",
-    code: "LGH-01",
-    category: "glass-door-handles",
-    material: "SS 304",
-    finish: "Satin",
-    image: productHandle,
-    description: "H-Type pull handle for frameless glass doors",
-  },
-  {
-    id: 8,
-    name: "Shower Hinge LSH-90",
-    code: "LSH-90",
-    category: "shower-hinges",
-    material: "SS 304",
-    finish: "Glossy",
-    image: productShower,
-    description: "90° glass to wall shower hinge with soft close",
-  },
-  {
-    id: 9,
-    name: "Floor Spring LFS-03",
-    code: "LFS-03",
-    category: "Spider Fittings",
-    material: "SS 304",
-    finish: "Glossy",
-    image: productFloorSpring,
-    description: "Premium floor spring with 90° hold open function",
-  },
-  {
-    id: 10,
-    name: "Glass Handle D-Type LGH-02",
-    code: "LGH-02",
-    category: "glass-door-handles",
-    material: "SS 202",
-    finish: "Satin",
-    image: productHandle,
-    description: "D-Type curved handle for elegant glass entrances",
-  },
-  {
-    id: 11,
-    name: "Patch Fitting LPF-02",
-    code: "LPF-02",
-    category: "patch-fittings",
-    material: "SS 304",
-    finish: "Satin",
-    image: productPatch,
-    description: "Glass to wall 90° patch fitting for partitions",
-  },
-  {
-    id: 12,
-    name: "Mortise Handle LMH-45",
-    code: "LMH-45",
-    category: "mortise-handles",
-    material: "SS 304",
-    finish: "Glossy",
-    image: productMortise,
-    description: "Modern slim profile lever handle design",
-  },
-  {
-    id: 13,
     name: "Floor Spring",
     image: floor1,
     category: "floor-springs"
   },
   {
-    id: 14,
+    id: 2,
     name: "Floor Spring",
     image: floor2,
     category: "floor-springs"
   },
-   {
-    id: 15,
+  {
+    id: 3,
     name: "Floor Spring",
     image: floor3,
     category: "floor-springs"
-  }, {
-    id: 16,
+  },
+  {
+    id: 4,
     name: "Floor Spring",
     image: floor4,
     category: "floor-springs"
-  }, {
-    id: 17,
+  },
+  {
+    id: 5,
     name: "Floor Spring",
     image: floor5,
     category: "floor-springs"
-  }, {
-    id: 18,
+  },
+  {
+    id: 6,
     name: "Floor Spring",
     image: floor6,
     category: "floor-springs"
-  }, {
-    id: 19,
+  },
+  {
+    id: 7,
     name: "Floor Spring",
     image: floor7,
     category: "floor-springs"
-  }, {
-    id: 20,
+  },
+  {
+    id: 8,
     name: "Floor Spring",
     image: floor8,
     category: "floor-springs"
-  }, {
-    id: 21,
+  },
+  {
+    id: 9,
     name: "Floor Spring",
     image: floor9,
     category: "floor-springs"
-  }, {
-    id: 22,
+  },
+  {
+    id: 10,
     name: "Floor Spring",
     image: floor10,
     category: "floor-springs"
-  }, {
-    id: 23,
+  },
+  {
+    id: 11,
     name: "Floor Spring",
     image: floor11,
     category: "floor-springs"
   },
+
+  {
+    id: 12,
+    name: "Door Closer",
+    image: door1,
+    category: "door-closers"
+  },
+  {
+    id: 13,
+    name: "Door Closer",
+    image: door2,
+    category: "door-closers"
+  },
+  {
+    id: 14,
+    name: "Door Closer",
+    image: door3,
+    category: "door-closers"
+  },
+  {
+    id: 15,
+    name: "Door Closer",
+    image: door4,
+    category: "door-closers"
+  },
+  {
+    id: 16,
+    name: "Door Closer",
+    image: door5,
+    category: "door-closers"
+  },
+  {
+    id: 17,
+    name: "Door Closer",
+    image: door6,
+    category: "door-closers"
+  },
+  {
+    id: 18,
+    name: "Door Closer",
+    image: door7,
+    category: "door-closers"
+  },
+  {
+    id: 19,
+    name: "Door Closer",
+    image: door8,
+    category: "door-closers"
+  },
+
+  {
+    id: 20,
+    name: "Patch Fittings",
+    image: patch1,
+    category: "patch-fittings"
+  },
+  {
+    id: 21,
+    name: "Patch Fittings",
+    image: patch2,
+    category: "patch-fittings"
+  },
+  {
+    id: 22,
+    name: "Patch Fittings",
+    image: patch3,
+    category: "patch-fittings"
+  },
+  {
+    id: 23,
+    name: "Patch Fittings",
+    image: patch4,
+    category: "patch-fittings"
+  },
+  {
+    id: 24,
+    name: "Patch Fittings",
+    image: patch5,
+    category: "patch-fittings"
+  },
+  {
+    id: 25,
+    name: "Patch Fittings",
+    image: patch6,
+    category: "patch-fittings"
+  },
+  {
+    id: 26,
+    name: "Patch Fittings",
+    image: patch7,
+    category: "patch-fittings"
+  },
+  {
+    id: 27,
+    name: "Patch Fittings",
+    image: patch8,
+    category: "patch-fittings"
+  },
+  {
+    id: 28,
+    name: "Patch Fittings",
+    image: patch9,
+    category: "patch-fittings"
+  },
+
+  {
+    id: 29,
+    name: "Glass Locks",
+    image: lock1,
+    category: "glass-locks"
+  },
+  {
+    id: 30,
+    name: "Glass Locks",
+    image: lock2,
+    category: "glass-locks"
+  },
+  {
+    id: 31,
+    name: "Glass Locks",
+    image: lock3,
+    category: "glass-locks"
+  },
+  {
+    id: 32,
+    name: "Glass Locks",
+    image: lock4,
+    category: "glass-locks"
+  },
+  {
+    id: 33,
+    name: "Glass Locks",
+    image: lock5,
+    category: "glass-locks"
+  },
+  {
+    id: 34,
+    name: "Glass Locks",
+    image: lock6,
+    category: "glass-locks"
+  },
+  {
+    id: 35,
+    name: "Glass Locks",
+    image: lock7,
+    category: "glass-locks"
+  },
+  {
+    id: 36,
+    name: "Glass Locks",
+    image: lock8,
+    category: "glass-locks"
+  },
+  {
+    id: 37,
+    name: "Glass Locks",
+    image: lock9,
+    category: "glass-locks"
+  },
+  {
+    id: 38,
+    name: "Glass Locks",
+    image: lock10,
+    category: "glass-locks"
+  },
+  {
+    id: 39,
+    name: "Glass Locks",
+    image: lock11,
+    category: "glass-locks"
+  },
+  {
+    id: 40,
+    name: "Glass Locks",
+    image: lock12,
+    category: "glass-locks"
+  },
+
+  {
+    id: 41,
+    name: "Shower Hinges",
+    image: shower1,
+    category: "shower-hinges"
+  },
+  {
+    id: 42,
+    name: "Shower Hinges",
+    image: shower2,
+    category: "shower-hinges"
+  },
+  {
+    id: 43,
+    name: "Shower Hinges",
+    image: shower3,
+    category: "shower-hinges"
+  },
+  {
+    id: 44,
+    name: "Shower Hinges",
+    image: shower4,
+    category: "shower-hinges"
+  },
+  {
+    id: 45,
+    name: "Shower Hinges",
+    image: shower5,
+    category: "shower-hinges"
+  },
+  {
+    id: 46,
+    name: "Shower Hinges",
+    image: shower6,
+    category: "shower-hinges"
+  },
+  {
+    id: 47,
+    name: "Shower Hinges",
+    image: shower7,
+    category: "shower-hinges"
+  },
+  {
+    id: 48,
+    name: "Shower Hinges",
+    image: shower8,
+    category: "shower-hinges"
+  },
+  {
+    id: 49,
+    name: "Shower Hinges",
+    image: shower9,
+    category: "shower-hinges"
+  },
+  {
+    id: 50,
+    name: "Shower Hinges",
+    image: shower10,
+    category: "shower-hinges"
+  },
+  {
+    id: 51,
+    name: "Shower Hinges",
+    image: shower11,
+    category: "shower-hinges"
+  },
+
+  {
+    id: 52,
+    name: "Sliding Door Roller",
+    image: doorRoller1,
+    category: "sliding-door-roller"
+  },
+  {
+    id: 53,
+    name: "Sliding Door Roller",
+    image: doorRoller2,
+    category: "sliding-door-roller"
+  },
+  {
+    id: 54,
+    name: "Sliding Door Roller",
+    image: doorRoller3,
+    category: "sliding-door-roller"
+  },
+  {
+    id: 55,
+    name: "Sliding Door Roller",
+    image: doorRoller4,
+    category: "sliding-door-roller"
+  },
+  {
+    id: 56,
+    name: "Sliding Door Roller",
+    image: doorRoller5,
+    category: "sliding-door-roller"
+  },
+  {
+    id: 57,
+    name: "Sliding Door Roller",
+    image: doorRoller6,
+    category: "sliding-door-roller"
+  },
+  {
+    id: 58,
+    name: "Sliding Door Roller",
+    image: doorRoller7,
+    category: "sliding-door-roller"
+  },
+  {
+    id: 59,
+    name: "Sliding Door Roller",
+    image: doorRoller8,
+    category: "sliding-door-roller"
+  },
+  {
+    id: 60,
+    name: "Sliding Door Roller",
+    image: doorRoller9,
+    category: "sliding-door-roller"
+  },
+  {
+    id: 61,
+    name: "Sliding Door Roller",
+    image: doorRoller10,
+    category: "sliding-door-roller"
+  },
+
+  {
+    id: 62,
+    name: "Spider Fitting",
+    image: spider1,
+    category: "spider-fittings"
+  },
+  {
+    id: 63,
+    name: "Spider Fitting",
+    image: spider2,
+    category: "spider-fittings"
+  },
+  {
+    id: 64,
+    name: "Spider Fitting",
+    image: spider3,
+    category: "spider-fittings"
+  },
+  {
+    id: 65,
+    name: "Spider Fitting",
+    image: spider4,
+    category: "spider-fittings"
+  },
+  {
+    id: 66,
+    name: "Spider Fitting",
+    image: spider5,
+    category: "spider-fittings"
+  },
+
+  {
+    id: 67,
+    name: "Glass Door Handles",
+    image: handel1,
+    category: "glass-door-handles"
+  },
+  {
+    id: 68,
+    name: "Glass Door Handles",
+    image: handel2,
+    category: "glass-door-handles"
+  },
+  {
+    id: 69,
+    name: "Glass Door Handles",
+    image: handel3,
+    category: "glass-door-handles"
+  },
+  {
+    id: 70,
+    name: "Glass Door Handles",
+    image: handel4,
+    category: "glass-door-handles"
+  },
+  {
+    id: 71,
+    name: "Glass Door Handles",
+    image: handel5,
+    category: "glass-door-handles"
+  },
+  {
+    id: 72,
+    name: "Glass Door Handles",
+    image: handel6,
+    category: "glass-door-handles"
+  },
+  {
+    id: 73,
+    name: "Glass Door Handles",
+    image: handel7,
+    category: "glass-door-handles"
+  },
+  {
+    id: 74,
+    name: "Glass Door Handles",
+    image: handel8,
+    category: "glass-door-handles"
+  },
+  {
+    id: 75,
+    name: "Glass Door Handles",
+    image: handel9,
+    category: "glass-door-handles"
+  },
+  {
+    id: 76,
+    name: "Glass Door Handles",
+    image: handel10,
+    category: "glass-door-handles"
+  },
+  {
+    id: 77,
+    name: "Glass Door Handles",
+    image: handel11,
+    category: "glass-door-handles"
+  },
+  {
+    id: 78,
+    name: "Glass Door Handles",
+    image: handel12,
+    category: "glass-door-handles"
+  },
+  {
+    id: 79,
+    name: "Glass Door Handles",
+    image: handel13,
+    category: "glass-door-handles"
+  },
+  {
+    id: 80,
+    name: "Glass Door Handles",
+    image: handel14,
+    category: "glass-door-handles"
+  }
+
 ];
 export type WatermarkPosition =
   | "top-left"

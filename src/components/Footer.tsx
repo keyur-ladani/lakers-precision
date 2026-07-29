@@ -29,7 +29,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <h3 className="text-2xl font-heading font-bold tracking-wide">
-                LAKERS
+                Allen
               </h3>
               <p className="text-xs tracking-widest uppercase text-primary-foreground/60 mt-1">
                 Architectural Hardware Solutions
