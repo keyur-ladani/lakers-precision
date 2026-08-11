@@ -7,7 +7,7 @@ import productPatch from "@/assets/product-patch.jpg";
 import productLock from "@/assets/product-lock.jpg";
 import productSpider from "@/assets/product-spider.jpg";
 import productDoorCloser from "@/assets/product-door-closer.jpg";
-import productMortise from "@/assets/product-mortise.jpg";
+import slimPartition from "@/assets/slim-partition.jpg";
 import productHandle from "@/assets/product-handle.jpg";
 import productShower from "@/assets/product-shower.jpg";
 
@@ -43,10 +43,10 @@ const categories = [
     image: productDoorCloser,
   },
   {
-    id: "mortise-handles",
-    name: "Mortise Handles",
-    description: "Elegant lever handles with mortise lock bodies",
-    image: productMortise,
+    id: "slim-partition",
+    name: "Slim Partition",
+    description: "a modern interior divider system built with ultra-thin aluminum or stainless steel frames that hold large glass panels",
+    image: slimPartition,
   },
   {
     id: "glass-door-handles",

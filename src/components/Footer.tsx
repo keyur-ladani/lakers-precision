@@ -103,7 +103,8 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-accent mt-0.5 shrink-0" />
                 <span className="text-primary-foreground/80 text-sm">
-                  Rajkot, Gujarat, India
+                  Head Office : Ahmedabad, Gujarat, India
+                  Manufacturing Unit : Rajkot, Gujarat, India
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -121,7 +122,7 @@ export function Footer() {
                   href="mailto:info@lakers.in"
                   className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors"
                 >
-                  info@lakers.in
+                  allencreation7@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

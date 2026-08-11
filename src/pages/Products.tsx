@@ -16,7 +16,7 @@ import floor6 from "@/assets/Fllor-springs/floor-6.jpg"
 import floor7 from "@/assets/Fllor-springs/floor-7.jpg"
 import floor8 from "@/assets/Fllor-springs/floor-8.jpg"
 import floor9 from "@/assets/Fllor-springs/floor-9.jpg"
-import floor10 from "@/assets/Fllor-springs/floor-10.jpg"
+// import floor10 from "@/assets/Fllor-springs/floor-10.jpg"
 import floor11 from "@/assets/Fllor-springs/floor-11.jpg"
 
 import door1 from "@/assets/DOOR CLOSER/door-1.jpg"
@@ -25,13 +25,13 @@ import door3 from "@/assets/DOOR CLOSER/door-3.jpg"
 import door4 from "@/assets/DOOR CLOSER/door-4.jpg"
 import door5 from "@/assets/DOOR CLOSER/door-5.jpg"
 import door6 from "@/assets/DOOR CLOSER/door-6.jpg"
-import door7 from "@/assets/DOOR CLOSER/door-7.jpg"
+// import door7 from "@/assets/DOOR CLOSER/door-7.jpg"
 import door8 from "@/assets/DOOR CLOSER/door-8.jpg"
 
 import patch1 from "@/assets/PATCH FITTINGS/patch-1.jpg"
 import patch2 from "@/assets/PATCH FITTINGS/patch-2.jpg"
-import patch3 from "@/assets/PATCH FITTINGS/patch-3.jpg"
-import patch4 from "@/assets/PATCH FITTINGS/patch-4.jpg"
+// import patch3 from "@/assets/PATCH FITTINGS/patch-3.jpg"
+// import patch4 from "@/assets/PATCH FITTINGS/patch-4.jpg"
 import patch5 from "@/assets/PATCH FITTINGS/patch-5.jpg"
 import patch6 from "@/assets/PATCH FITTINGS/patch-6.jpg"
 import patch7 from "@/assets/PATCH FITTINGS/patch-7.jpg"
@@ -99,6 +99,11 @@ import handel12 from "@/assets/GLASS DOOR HANDLE/handel12.jpg"
 import handel13 from "@/assets/GLASS DOOR HANDLE/handel13.jpg"
 import handel14 from "@/assets/GLASS DOOR HANDLE/handel14.jpg"
 
+import slim1 from "@/assets/SLIM PARTITION/slim-partition1.jpg"
+import slim2 from "@/assets/SLIM PARTITION/slim-partition2.jpg"
+import slim3 from "@/assets/SLIM PARTITION/slim-partition3.jpg"
+import slim4 from "@/assets/SLIM PARTITION/slim-partition4.jpg"
+
 import productFloorSpring from "@/assets/product-floor-spring.jpg";
 import productPatch from "@/assets/product-patch.jpg";
 import productLock from "@/assets/product-lock.jpg";
@@ -118,6 +123,7 @@ const categories = [
   { id: "sliding-door-roller", name: "Sliding Door Roller" },
   { id: "spider-fittings", name: "Spider Fittings" },
   { id: "glass-door-handles", name: "Glass Door Handles" },
+  { id: "slim-partition", name: "Slim Partition" }
 ];
 
 // const materials = ["All", "SS 202", "SS 304"];
@@ -289,12 +295,12 @@ const products = [
     image: floor9,
     category: "floor-springs"
   },
-  {
-    id: 10,
-    name: "Floor Spring",
-    image: floor10,
-    category: "floor-springs"
-  },
+  // {
+  //   id: 10,
+  //   name: "Floor Spring",
+  //   image: floor10,
+  //   category: "floor-springs"
+  // },
   {
     id: 11,
     name: "Floor Spring",
@@ -338,12 +344,12 @@ const products = [
     image: door6,
     category: "door-closers"
   },
-  {
-    id: 18,
-    name: "Door Closer",
-    image: door7,
-    category: "door-closers"
-  },
+  // {
+  //   id: 18,
+  //   name: "Door Closer",
+  //   image: door7,
+  //   category: "door-closers"
+  // },
   {
     id: 19,
     name: "Door Closer",
@@ -363,30 +369,30 @@ const products = [
     image: patch2,
     category: "patch-fittings"
   },
-  {
-    id: 22,
-    name: "Patch Fittings",
-    image: patch3,
-    category: "patch-fittings"
-  },
-  {
-    id: 23,
-    name: "Patch Fittings",
-    image: patch4,
-    category: "patch-fittings"
-  },
-  {
-    id: 24,
-    name: "Patch Fittings",
-    image: patch5,
-    category: "patch-fittings"
-  },
-  {
-    id: 25,
-    name: "Patch Fittings",
-    image: patch6,
-    category: "patch-fittings"
-  },
+  // {
+  //   id: 22,
+  //   name: "Patch Fittings",
+  //   image: patch3,
+  //   category: "patch-fittings"
+  // },
+  // {
+  //   id: 23,
+  //   name: "Patch Fittings",
+  //   image: patch4,
+  //   category: "patch-fittings"
+  // },
+  // {
+  //   id: 24,
+  //   name: "Patch Fittings",
+  //   image: patch5,
+  //   category: "patch-fittings"
+  // },
+  // {
+  //   id: 25,
+  //   name: "Patch Fittings",
+  //   image: patch6,
+  //   category: "patch-fittings"
+  // },
   {
     id: 26,
     name: "Patch Fittings",
@@ -430,24 +436,24 @@ const products = [
     image: lock4,
     category: "glass-locks"
   },
-  {
-    id: 33,
-    name: "Glass Locks",
-    image: lock5,
-    category: "glass-locks"
-  },
-  {
-    id: 34,
-    name: "Glass Locks",
-    image: lock6,
-    category: "glass-locks"
-  },
-  {
-    id: 35,
-    name: "Glass Locks",
-    image: lock7,
-    category: "glass-locks"
-  },
+  // {
+  //   id: 33,
+  //   name: "Glass Locks",
+  //   image: lock5,
+  //   category: "glass-locks"
+  // },
+  // {
+  //   id: 34,
+  //   name: "Glass Locks",
+  //   image: lock6,
+  //   category: "glass-locks"
+  // },
+  // {
+  //   id: 35,
+  //   name: "Glass Locks",
+  //   image: lock7,
+  //   category: "glass-locks"
+  // },
   {
     id: 36,
     name: "Glass Locks",
@@ -662,24 +668,24 @@ const products = [
     image: handel4,
     category: "glass-door-handles"
   },
-  {
-    id: 71,
-    name: "Glass Door Handles",
-    image: handel5,
-    category: "glass-door-handles"
-  },
+  // {
+  //   id: 71,
+  //   name: "Glass Door Handles",
+  //   image: handel5,
+  //   category: "glass-door-handles"
+  // },
   {
     id: 72,
     name: "Glass Door Handles",
     image: handel6,
     category: "glass-door-handles"
   },
-  {
-    id: 73,
-    name: "Glass Door Handles",
-    image: handel7,
-    category: "glass-door-handles"
-  },
+  // {
+  //   id: 73,
+  //   name: "Glass Door Handles",
+  //   image: handel7,
+  //   category: "glass-door-handles"
+  // },
   {
     id: 74,
     name: "Glass Door Handles",
@@ -704,12 +710,12 @@ const products = [
     image: handel11,
     category: "glass-door-handles"
   },
-  {
-    id: 78,
-    name: "Glass Door Handles",
-    image: handel12,
-    category: "glass-door-handles"
-  },
+  // {
+  //   id: 78,
+  //   name: "Glass Door Handles",
+  //   image: handel12,
+  //   category: "glass-door-handles"
+  // },
   {
     id: 79,
     name: "Glass Door Handles",
@@ -721,6 +727,30 @@ const products = [
     name: "Glass Door Handles",
     image: handel14,
     category: "glass-door-handles"
+  },
+  {
+    id: 81,
+    name: "Glass Door Handles",
+    image: slim1,
+    category: "slim-partition"
+  },
+  {
+    id: 82,
+    name: "Glass Door Handles",
+    image: slim2,
+    category: "slim-partition"
+  },
+  {
+    id: 83,
+    name: "Glass Door Handles",
+    image: slim3,
+    category: "slim-partition"
+  },
+  {
+    id: 84,
+    name: "Glass Door Handles",
+    image: slim4,
+    category: "slim-partition"
   }
 
 ];

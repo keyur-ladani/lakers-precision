@@ -68,8 +68,8 @@ const About = () => {
               About Us
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground mt-4 mb-6">
-              Building Trust Through{" "}
-              <span className="text-accent">Precision</span>
+             Built on Precision, Secured with{" "}
+              <span className="text-accent">Trust</span>
             </h1>
             <p className="text-primary-foreground/80 text-xl leading-relaxed">
               Since 2015, Allen has been at the forefront of architectural
@@ -197,7 +197,7 @@ const About = () => {
           </div>
 
           {/* Location */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -214,7 +214,7 @@ const About = () => {
                 efficient nationwide distribution.
               </p>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 

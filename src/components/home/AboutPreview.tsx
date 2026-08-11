@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Award, Shield, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import productHandle from "@/assets/product-handle.jpg";
+import productHandle from "@/assets/AboutExcellence.jpg";
 
 const features = [
   {

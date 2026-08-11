@@ -24,18 +24,6 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 section-container py-32">
         <div className="max-w-4xl">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-4 py-2 mb-8"
-          >
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-primary-foreground/90 text-sm font-medium">
-              Since 2015 • Rajkot, India
-            </span>
-          </motion.div>
 
           {/* Heading */}
           <motion.h1

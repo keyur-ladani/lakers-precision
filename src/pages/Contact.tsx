@@ -56,17 +56,17 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Rajkot, Gujarat, India", "Industrial Area"],
+      details: ["Head Office : Ahmedabad, Gujarat, India","Manufacturing Unit:Rajkot, Gujarat, India"],
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 81403 76087","+91 90334 94363"],
+      details: ["+91 81403 76087"],
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@lakers.in", "sales@lakers.in"],
+      details: ["allencreation7@gmail.com"],
     },
     {
       icon: Clock,
@@ -314,7 +314,7 @@ const Contact = () => {
       </section>
 
       {/* Map Placeholder */}
-      <section className="h-96 bg-muted">
+      {/* <section className="h-96 bg-muted">
         <div className="w-full h-full flex items-center justify-center">
           <div className="text-center">
             <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
@@ -326,7 +326,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };
